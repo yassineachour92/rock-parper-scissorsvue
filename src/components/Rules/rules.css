@@ -1,0 +1,16 @@
+.modalRules{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+.title{
+    margin-bottom: 7rem;
+}
+.icon_close{
+    margin-top:8rem;
+}
+.ant-modal-close{
+    display: none;
+}
