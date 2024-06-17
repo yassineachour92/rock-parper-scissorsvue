@@ -17,9 +17,9 @@ const ResultGame = ({
 }: ResultProps) => {
   return (
     <div className="result">
-      <p>You chose: {userChoice}</p>
-      <p>Computer chose: {computerChoice}</p>
-      <p>{result}</p>
+      <p data-testid="user-choice">You chose: {userChoice}</p>
+      <p data-testid="computer_chose">Computer chose: {computerChoice}</p>
+      <p data-testid="result">{result}</p>
       <Button onClick={()=>setScore(0)}> Play Again </Button>
     </div>
   );
