@@ -49,6 +49,7 @@ const Game = ({ score, setScore }) => {
         userChoice={userChoice}
         computerChoice={computerChoice}
         result={result}
+        setScore={setScore}
       />
       <div className="rules">
         <Rules />
