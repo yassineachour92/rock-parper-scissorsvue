@@ -30,7 +30,7 @@ const Rules = () => {
         footer={null}
       >
         <div className="modalRules">
-          <h2 className="title"> Rules</h2>
+          <h2 data-testid="Rules" className="title" > Rules</h2>
           <img src="/images/image-rules.svg" alt="rules" />
           <span className="icon_close" onClick={handleCancel}>X</span>
         </div>
