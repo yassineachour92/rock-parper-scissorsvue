@@ -1,26 +1,42 @@
 import React from "react";
 import "./ResultGame.css";
-import { Button } from "antd";
+import { Button, Flex } from "antd";
 
 interface ResultProps {
   userChoice: string;
   computerChoice: string;
   result: string;
-  setShowResultat:Function
+  setShowResultat: Function;
 }
 
 const ResultGame = ({
   userChoice,
   computerChoice,
   result,
-  setShowResultat
+  setShowResultat,
 }: ResultProps) => {
   return (
     <div className="result">
-      <p data-testid="user-choice">You chose: {userChoice}</p>
-      <p data-testid="computer_chose">Computer chose: {computerChoice}</p>
+      <p data-testid="user-choice">YOU PICKED</p>
       <p data-testid="result">{result}</p>
-      <Button onClick={()=>setShowResultat(false)}> Play Again </Button>
+      <p data-testid="computer_chose">THE HOUSE PICKED</p>
+      <img
+        className={`choice-button-result ${userChoice}`}
+        src={`images/icon-${userChoice}.svg`}
+        alt={userChoice}
+      />
+
+      <Flex gap="middle">
+        <Button size="middle" onClick={() => setShowResultat(false)}>
+          PLAY AGAIN
+        </Button>
+      </Flex>
+
+      <img
+        className={`choice-button-result ${computerChoice}`}
+        src={`images/icon-${computerChoice}.svg`}
+        alt={computerChoice}
+      />
     </div>
   );
 };

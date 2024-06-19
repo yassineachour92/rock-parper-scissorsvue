@@ -1,24 +1,19 @@
 .game {
-  position: relative;
   width: 100%;
   max-width: 300px;
-  margin: 50px 0;
-  background-image: url('../../../public/images/bg-triangle.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  margin-top: 5rem;
+  margin-left: 6rem;
 }
 
 .choices {
   display: grid;
-  grid-template-columns: 230px 210px;
-  grid-template-rows: 168px 255px;
-  grid-auto-flow: column;
-  justify-items: center;
-  align-items: center;
-  justify-content: center;
-}
 
+}
+.backgroud_img{
+  position: absolute;
+    z-index: -9;
+    margin: 5%;
+}
 .rules{
   position:fixed;
   bottom:1%;

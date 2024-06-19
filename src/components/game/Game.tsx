@@ -26,12 +26,12 @@ const Game = ({ score, setScore }) => {
       (userChoice === "paper" && computerChoice === "rock") ||
       (userChoice === "scissors" && computerChoice === "paper")
     ) {
-      setResult("You win!");
+      setResult("YOU WIN");
       setScore(score + 1);
     } else if (userChoice === computerChoice) {
-      setResult("It's a draw!");
+      setResult("DROW");
     } else {
-      setResult("Computer wins!");
+      setResult("YOU LOSE");
       setScore(score - 1);
     }
   };
@@ -40,6 +40,11 @@ const Game = ({ score, setScore }) => {
     <div className="game">
       {!showResultat && (
         <div className="choices">
+            <img
+            src="images/bg-triangle.svg"
+            alt="img_background"
+            className="backgroud_img"
+          />
           {choices.map((choice) => (
             <ChoiceButton
               key={choice}
