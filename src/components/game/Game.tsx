@@ -14,8 +14,10 @@ const Game = ({ score, setScore }) => {
   const [userChoice, setUserChoice] = useState<string>("");
 
   const [computerChoice, setComputerChoice] = useState<string>("");
+  const [showResultat, setShowResultat] = useState(false);
 
   const playGame = (userChoice: Choice) => {
+    setShowResultat(true)
     setUserChoice(userChoice);
     setComputerChoice(choices[Math.floor(Math.random() * choices.length)]);
 
@@ -36,21 +38,25 @@ const Game = ({ score, setScore }) => {
 
   return (
     <div className="game">
-      <div className="choices">
-        {choices.map((choice) => (
-          <ChoiceButton
-            key={choice}
-            choice={choice}
-            onClick={() => playGame(choice)}
-          />
-        ))}
-      </div>
-      <ResultGame
-        userChoice={userChoice}
-        computerChoice={computerChoice}
-        result={result}
-        setScore={setScore}
-      />
+      {!showResultat && (
+        <div className="choices">
+          {choices.map((choice) => (
+            <ChoiceButton
+              key={choice}
+              choice={choice}
+              onClick={() => playGame(choice)}
+            />
+          ))}
+        </div>
+      )}
+      {showResultat && (
+        <ResultGame
+          userChoice={userChoice}
+          computerChoice={computerChoice}
+          result={result}
+          setShowResultat={setShowResultat}
+        />
+      )}
       <div className="rules">
         <Rules />
       </div>
