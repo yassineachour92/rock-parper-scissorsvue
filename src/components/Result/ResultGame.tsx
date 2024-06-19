@@ -18,7 +18,7 @@ const ResultGame = ({
   return (
     <div className="result">
       <p data-testid="user-choice">YOU PICKED</p>
-      <p data-testid="result">{result}</p>
+      <p data-testid="result" className="resultMessage">{result}</p>
       <p data-testid="computer_chose">THE HOUSE PICKED</p>
       <img
         className={`choice-button-result ${userChoice}`}
@@ -26,8 +26,8 @@ const ResultGame = ({
         alt={userChoice}
       />
 
-      <Flex gap="middle">
-        <Button size="middle" onClick={() => setShowResultat(false)}>
+      <Flex gap="large">
+        <Button className="button_playAgain" onClick={() => setShowResultat(false)}>
           PLAY AGAIN
         </Button>
       </Flex>
