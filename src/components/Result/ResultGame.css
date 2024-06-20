@@ -1,43 +1,63 @@
 .result {
   display: grid;
-  grid-template-columns:256px 230px 216px;
+  justify-content: center;
+  grid-template-columns: 256px 230px 216px;
   font-size: 1.2em;
   margin-top: 20px;
 }
 
-.choice-button-result.rock {
-  border: 16px solid #de3a5a;
+.choice-button-result {
+  justify-self: center;
   border-radius: 50%;
   padding: 10px;
   background-color: white;
   margin-left: 11px;
+}
 
+.choice-button-result.rock {
+  border: 16px solid #de3a5a;
 }
 
 .choice-button-result.paper {
   border: 16px solid #5671f5;
-  border-radius: 50%;
-  padding: 10px;
-  background-color: white;
-  margin-left: 11px;
-
 }
 
 .choice-button-result.scissors {
   border: 16px solid #eca922;
-  border-radius: 50%;
-  padding: 10px;
-  background-color: white;
-  margin-left: 11px;
-
 }
 
-.resultMessage{
+.resultMessage {
   margin-top: 83px;
-  margin-left: 15px;
   font-size: xx-large;
 }
 
-.button_playAgain{
-  margin-left: 35px;
+.button_playAgain {
+  justify-self: center;
+}
+
+@media (max-width: 426px) {
+  .result {
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 0.8rem;
+  }
+  .choice-button-result {
+    margin-left: 0;
+
+    width: 6vh;
+    height: 6vh;
+  
+  }
+.button_playAgain_title{
+  font-size: 0.7rem;
+
+}
+
+  .resultMessage {
+    margin-top: 20px;
+    font-size: large;
+  }
+
+  .button_playAgain {
+    margin-top: 20px;
+  }
 }

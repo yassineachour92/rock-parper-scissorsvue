@@ -26,9 +26,9 @@ const ResultGame = ({
         alt={userChoice}
       />
 
-      <Flex gap="large">
-        <Button className="button_playAgain" onClick={() => setShowResultat(false)}>
-          PLAY AGAIN
+      <Flex className="button_playAgain" gap="large">
+        <Button  onClick={() => setShowResultat(false)}>
+         <p className="button_playAgain_title"> PLAY AGAIN </p>
         </Button>
       </Flex>
 
