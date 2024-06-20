@@ -36,12 +36,12 @@ defineFeature(feature, (test) => {
       const result = screen.getByTestId("result");
       const userChoiceElement = screen.getByTestId("user-choice");
       expect(result).toBeInTheDocument();
-      expect(userChoiceElement.textContent).toContain("rock");
+      expect(userChoiceElement.textContent).toContain("YOU PICKED");
       if (computerChoice.textContent === "scissors") {
-        expect(result.textContent).toBe("You win!");
+        expect(result.textContent).toBe("YOU WIN");
       } else if (computerChoice.textContent === userChoiceElement.textContent) {
-        expect(result.textContent).toBe("It's a draw!");
-      } else expect(result.textContent).toBe("Computer wins!");
+        expect(result.textContent).toBe("DROW");
+      } else expect(result.textContent).toBe("YOU LOSE");
     });
   });
 
