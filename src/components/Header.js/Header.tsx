@@ -4,7 +4,7 @@ import './Header.css';
 const Header = ({ score }) => {
   return (
     <div className="header">
-      <div className="title">
+      <div className="title_header">
         <h1>ROCK<br/>PAPER<br/>SCISSORS</h1>
       </div>
       <div className="score-box">

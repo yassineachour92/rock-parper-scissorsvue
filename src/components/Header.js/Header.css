@@ -2,21 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 49%;
+  max-width: 55%;
   border: 3px solid #606e85;
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
   margin-top: 2rem;
   height: 10rem;
-  margin-left: 175px;
 }
 
-.title h1 {
+.title_header h1 {
   margin: 0;
   font-size: 1.5em;
   line-height: 1.2em;
-  padding-top: 6rem;
 }
 
 .score-box {
@@ -25,6 +23,7 @@
   border-radius: 10px;
   padding: 10px 20px;
   text-align: center;
+  margin-top: 1rem;
 }
 
 .score-box p {
@@ -34,4 +33,44 @@
 .score {
   font-size: 2em;
   font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .header {
+    /* margin-left: 1rem; */
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* .title {
+    margin-bottom: 1rem;
+  } */
+
+  .score-box {
+    margin-top: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* .title_header h1 {
+    font-size: 1.2em;
+  } */
+
+  .score {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 426px) {
+  .header {
+    height: 7rem;
+  }
+  .title_header h1 {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+  .score-box {
+    width: 38%;
+    padding: 7px 11px;
+  }
 }
