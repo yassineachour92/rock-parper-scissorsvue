@@ -2,21 +2,40 @@
   width: 100%;
   max-width: 300px;
   margin-top: 5rem;
-  margin-left: 14rem;
 }
 
 .choices {
   display: grid;
-
+  justify-content: center;
 }
-.backgroud_img{
+.backgroud_img {
   position: absolute;
-    z-index: -9;
-    margin: 5%;
+  z-index: -9;
+  margin: 62px;
+  margin-left: 0px;
 }
-.rules{
-  position:fixed;
-  bottom:1%;
-  right:1%;
-  z-index:9999;
+.rules {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  z-index: 9999;
+}
+
+@media (max-width: 426px) {
+  .game {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .backgroud_img {
+    width: 70%;
+  }
+
+  .rules {
+    bottom: 2%;
+    right: 2%;
+  }
+  .backgroud_img {
+    margin-left: 50px;
+  }
 }
